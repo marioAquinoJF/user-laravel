@@ -1,18 +1,19 @@
 <?php
 
-namespace Emiolo\User\Controllers\Admin;
+namespace Emiolo\User\Controllers\RootAdmin;
 
-use Emiolo\User\Repositories\UserRepository;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Request;
 
-class UsersAdminController extends Controller
+use Emiolo\User\Repositories\UserRepositoryInterface;
+use Emiolo\User\Controllers\Controller;
+class UsersRootAdminController extends Controller
 {
 
     private $repository;
     private $responseFactory;
 
-    public function __construct(ResponseFactory $responseFactory, UserRepository $repository)
+    public function __construct(ResponseFactory $responseFactory, UserRepositoryInterface $repository)
     {
         $this->responseFactory = $responseFactory;
         $this->repository = $repository;
@@ -21,7 +22,7 @@ class UsersAdminController extends Controller
     public function index()
     {
         
-        return view('layouts.dasboard');
+        return view('dashboard.dashboadroot');
     }
 
     public function create()

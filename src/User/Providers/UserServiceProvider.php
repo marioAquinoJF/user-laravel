@@ -4,6 +4,8 @@ namespace Emiolo\User\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Emiolo\User\Routing\Router as ERouter; // Emiolo Router
+use Emiolo\User\Repositories\UserRepositoryInterface;
+use Emiolo\User\Repositories\UserRepositoryEloquent;
 
 class UserServiceProvider extends ServiceProvider
 {
@@ -28,7 +30,7 @@ class UserServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->bind(\Emiolo\User\Repositories\UserRepositoryInterface::class, \Emiolo\User\Repositories\UserRepositoryEloquent::class);
+        $this->app->bind(UserRepositoryInterface::class, UserRepositoryEloquent::class);
         $this->app->singleton("emiolo_user_route", function() {
             return new ERouter();
         });

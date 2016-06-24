@@ -2,7 +2,7 @@
 
 namespace Emiolo\User\Repositories;
 
-use User\Models\User;
+use Emiolo\User\Models\User;
 use CodePress\CodeDatabase\AbstractRepository;
 use CodePress\CodeDatabase\Contracts\CriteriaCollection;
 
