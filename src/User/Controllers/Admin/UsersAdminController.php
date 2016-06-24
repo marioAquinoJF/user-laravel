@@ -1,6 +1,6 @@
 <?php
 
-namespace Emiolo\User\Controllers;
+namespace Emiolo\User\Controllers\Admin;
 
 use Emiolo\User\Repositories\UserRepository;
 use Illuminate\Contracts\Routing\ResponseFactory;

@@ -3,7 +3,7 @@
 Route::group([
     'prefix' => 'admin/users',
     'as' => 'admin.users.',
-    'namespace' => 'CodePress\CodeUser\Controllers',
+    'namespace' => 'Emiolo\User\Controllers\Admin',
     'middleware' => ['web', 'auth']
         ], function() {
 
