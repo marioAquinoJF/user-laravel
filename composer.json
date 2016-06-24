@@ -1,5 +1,5 @@
 {
-    "name": "mario-aquino-jf/code-user",
+    "name": "mario-aquino-jf/emiolo-user-teste",
     "riquire": {
         "php": ">=5.5.9",
         "illuminate/auth": "~5.2",
