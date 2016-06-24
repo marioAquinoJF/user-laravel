@@ -20,8 +20,8 @@ class UsersAdminController extends Controller
 
     public function index()
     {
-        $users = $this->repository->all();
-        return $this->responseFactory->view('codeuser::index', compact('users'));
+        
+        return view('layouts.dasboard');
     }
 
     public function create()

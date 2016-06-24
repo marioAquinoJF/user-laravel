@@ -4,10 +4,10 @@ Route::group([
     'prefix' => 'admin/users',
     'as' => 'admin.users.',
     'namespace' => 'CodePress\CodeUser\Controllers',
-    'middleware' => ['web']
+    'middleware' => ['web', 'auth']
         ], function() {
 
-    Route::get('/', ['uses' => 'UsersAdminController@index', 'as' => 'index']);
+    Route::get('/dashboard', ['uses' => 'UsersAdminController@index', 'as' => 'index']);
     Route::get('/create', ['uses' => 'UsersAdminController@create', 'as' => 'create']);
     Route::post('/store', ['uses' => 'UsersAdminController@store', 'as' => 'store']);
     Route::get('{id}/edit', ['uses' => 'UsersAdminController@edit', 'as' => 'edit']);
