@@ -14,6 +14,9 @@ class UserServiceProvider extends ServiceProvider
             __DIR__.'/../../resources/migrations'=>  base_path('database/migrations')
             ],'migrations');
         $this->publishes([
+            __DIR__.'/../../resources/factories'=>  base_path('database/factories')
+            ],'migrations');
+        $this->publishes([
             __DIR__ . '/../../config/auth.php' => base_path('config/auth.php')
                 ], 'config');
         $this->publishes([
